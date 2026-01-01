@@ -335,9 +335,9 @@
                 if (!department) throw new Error('請選擇部門');
                 if (quantity < 1 || quantity > 10) throw new Error('數量必須在1-10之間');
                 
-                // 3. 提交到 Supabase
+                // 3. 提交到 Supabase 
                 const { data, error } = await supabase
-                    .from('form1_orders')
+                    .from('form1_orders') //supabase表單名
                     .insert([{
                         customer_name: name,
                         department: department,
